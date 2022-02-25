@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %} Список маршрутов {% endblock %}
+{% block content %}
+
+<h1> Список маршрутов </h1>
+
+<div class="row mx-auto">
+    <div class="col-md-8 my-2">
+        <table class="table table-striped">
+            <tr>
+                <th>Название</th>
+                <th>Откуда</th>
+                <th>Куда</th>
+                <th>Время в пути</th>
+            </tr>
+            {% for object in page_obj %}
+            <tr>
+                <td>
+                    <a href="{% url 'detail' object.pk%}"> {{object.name}} </a>
+
+                </td>
+                <td>{{object.from_city}}</td>
+                <td>{{object.to_city}}</td>
+                <td>{{object.total_travel_time}}</td>
+
+
+            </tr>
+
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+
+{% include 'paginator.html' %}
+{% endblock %}

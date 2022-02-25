@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %} Регистрация прошла успешна {% endblock %}
+{% block content %}
+
+<h1> Добро пожаловать, {{ new_user.username }} </h1>
+
+Спасибо за регистрацию, кликните <a href="{% url 'accounts:login' %}">здесь</a>, чтобы войти
+
+
+
+{% endblock %}
