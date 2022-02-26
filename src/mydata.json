@@ -1,0 +1,122 @@
+[
+{
+  "model": "cities.city",
+  "pk": 1,
+  "fields": {
+    "name": "Москва"
+  }
+},
+{
+  "model": "cities.city",
+  "pk": 2,
+  "fields": {
+    "name": "Лондон"
+  }
+},
+{
+  "model": "cities.city",
+  "pk": 3,
+  "fields": {
+    "name": "Париж"
+  }
+},
+{
+  "model": "cities.city",
+  "pk": 4,
+  "fields": {
+    "name": "Мадрид"
+  }
+},
+{
+  "model": "cities.city",
+  "pk": 12,
+  "fields": {
+    "name": "Амстердам"
+  }
+},
+{
+  "model": "routes.route",
+  "pk": 6,
+  "fields": {
+    "name": "12",
+    "total_travel_time": 49,
+    "from_city": 12,
+    "to_city": 3,
+    "trains": [
+      2,
+      6,
+      11
+    ]
+  }
+},
+{
+  "model": "trains.train",
+  "pk": 1,
+  "fields": {
+    "name": "tr1",
+    "travel_time": 4,
+    "from_city": 12,
+    "to_city": 1
+  }
+},
+{
+  "model": "trains.train",
+  "pk": 2,
+  "fields": {
+    "name": "tr2",
+    "travel_time": 3,
+    "from_city": 12,
+    "to_city": 4
+  }
+},
+{
+  "model": "trains.train",
+  "pk": 6,
+  "fields": {
+    "name": "tr6",
+    "travel_time": 22,
+    "from_city": 2,
+    "to_city": 3
+  }
+},
+{
+  "model": "trains.train",
+  "pk": 7,
+  "fields": {
+    "name": "tr7",
+    "travel_time": 8,
+    "from_city": 1,
+    "to_city": 12
+  }
+},
+{
+  "model": "trains.train",
+  "pk": 11,
+  "fields": {
+    "name": "tr11",
+    "travel_time": 24,
+    "from_city": 4,
+    "to_city": 2
+  }
+},
+{
+  "model": "trains.train",
+  "pk": 12,
+  "fields": {
+    "name": "tr12",
+    "travel_time": 44,
+    "from_city": 2,
+    "to_city": 12
+  }
+},
+{
+  "model": "trains.train",
+  "pk": 13,
+  "fields": {
+    "name": "tr13",
+    "travel_time": 52,
+    "from_city": 12,
+    "to_city": 2
+  }
+}
+]
