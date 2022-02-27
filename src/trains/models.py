@@ -16,7 +16,7 @@ class Train(models.Model):
 
     def clean(self):
         if self.from_city == self.to_city:
-            raise ValidationError('Измени город прибытия, Наташ')
+            raise ValidationError('Измените город прибытия')
         qs = Train.objects.filter(from_city=self.from_city,  # берем записи по фильтру,
                                   to_city=self.to_city,
                                   travel_time=self.travel_time).exclude(pk=self.pk)
@@ -25,7 +25,7 @@ class Train(models.Model):
         #Train == self.__class__
 
         if qs.exists():
-            raise ValidationError('Измени время в пути, такое уже есть, Наташ')
+            raise ValidationError('Измените время в пути, такое уже есть')
 
     def save(self, *args, **kwargs):
         self.clean()
