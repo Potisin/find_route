@@ -43,7 +43,7 @@ def get_routes(request, form) -> dict:
         _cities = [city.id for city in cities]
         right_ways = []
         for route in all_ways:
-            if all(city in route for city in cities):
+            if all(city in route for city in _cities):
                 right_ways.append(route)
 
         if not right_ways:
